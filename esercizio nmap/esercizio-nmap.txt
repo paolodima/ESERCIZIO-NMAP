@@ -1,0 +1,29 @@
+ESERCIZIO NMAP 
+
+Dalla macchina kali linux sono state effettuate diverse scansioni aventi come target la macchina Metaspoitable
+
+1] La prima scansione che e' stata effettuata e' OS fingerprint, la quale ci consente, attraverso il comando
+   "nmap -O <target>", di avere informazioni dettagliate sul sistema operativo della macchina target e sulle porte 
+    aperte di essa.
+--------------------------------------------------------------------------------------------------------------------------------------
+2] La seconda scansione effettuata e' Syn scan. Attraverso questa scansione individuiamo le porte aperte
+   della macchina target.La scansione effettuata con lo switch -sS sfrutta il 3WH ma non lo completa, infatti 
+   e' una scansione meno invasiva a differenza ad esempio di -sT
+----------------------------------------------------------------------------------------------------------------------------------------
+3] Per terza e' stata effettuata una scansione TCP connect con lo switch -sT. Possiamo notare varie differenze
+   tra la scansione SYN e quella TCP, ad esempio il tempo di esecuzione.La scansione TCP richiede piu' tempo
+   in quanto, come sopra citato, completa tutta la fase del 3WH ed e' considerata molto piu' invasiva, quindi
+   piu' facile da individuare.
+------------------------------------------------------------------------------------------------------------------------------------------
+4] Infine e' stata eseguita una Version detection con lo switch -sV. Grazie ad essa abbiamo ottenuto la
+   versione della macchina target e i relativi dettagli.
+  
+---------------------------------------------------------------------------------------------------------------------------------------- 
+Tutte le informazioni trovate grazie alle scansioni effettuate come:
+
+INDIRIZZO IP
+SISTEMA OPERATIVO
+PORTE APERTE
+SERVIZI IN ASCOLTO CON VERSIONE
+
+Sono consultabili negli screenshot allegati.
